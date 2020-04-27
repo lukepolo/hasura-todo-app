@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "tables": [
+    {
+      "table": {
+        "schema": "public",
+        "name": "settings"
+      },
+      "select_permissions": [
+        {
+          "role": "super-user",
+          "permission": {
+            "columns": [
+              "setting",
+              "id",
+              "value"
+            ],
+            "filter": {}
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "users"
+      },
+      "select_permissions": [
+        {
+          "role": "super-user",
+          "permission": {
+            "columns": [
+              "email"
+            ],
+            "filter": {
+              "id": {
+                "_eq": "X-Hasura-User-Id"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

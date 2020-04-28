@@ -23,4 +23,4 @@ Gets settings available if the user is a super user.
 
 #### Known Bugs
 * Settings Request will be a 200 if the user is a regular user (but without data)
-* I am sure there are more, through this thing together pretty quickly just to demo
+* I am sure there are more, threw this thing together pretty quickly just to demo
